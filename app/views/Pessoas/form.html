@@ -4,14 +4,30 @@
 #{script 'meu-script.js' /}
 #{set tittle:'A decorated page'/}
 
-<h1>Cadastro de Pessoas</h1>
 
-<form style="margin-left: 1rem" action="/Pessoas/salvar"> 
-	<label>Nome:</label>
-  <input type="text" name="pes.nome" > <br />
-    <label>Email:</label>
-  <input type="email" name="pes.email">
-  <br />       
-  <input type="submit"/>
-	
-</form>
+	<div class="container">
+	<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Formulário</button>
+
+	<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+	  <div class="offcanvas-header">
+	    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+	  </div>
+	  <div class="offcanvas-body">
+		<h1>#{get 'title' /}</h1>
+				<div>
+				<form action="@{Pessoas.salvar}">
+					<div class="input">
+					<label>Nome:</label>
+				  <input type="text" name="pes.nome" > <br />
+				   </div>
+				   <div class="input">
+				    <label>Email:</label>
+				  <input type="email" name="pes.email">
+				  </div>      
+				  <input class="submit" type="submit" value="Cadastrar"/>
+				  <img src="@{'public/images/hospital.png'}" alt="" />
+				</form>
+				</div>
+	  </div>
+	</div>
+</div>

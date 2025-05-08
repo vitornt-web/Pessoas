@@ -8,6 +8,10 @@ public class Pessoas extends Controller {
 	public static void form() {
 		render(); 
 	}
+	
+	public static void listar() {
+		render();
+	}
   
 	public static void detalhar(Pessoa pes){
 		render(pes);

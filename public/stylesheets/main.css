@@ -1,8 +1,33 @@
+body{
+	overflow-x:hidden;
+}
+
 h1{
   color: red;
   font-style: italic;
+  margin-left:3.5rem;
 }
 
-input{
-	color: gray;
+.container{
+	
+	margin-left: 15rem;
+	margin-top: 15rem;
 }
+
+form{
+	align-items: center;
+	justify-content:center;
+}
+
+.input{
+	margin-top:1.5rem;
+	margin-left:2rem;
+}
+
+.submit{
+	margin-top:1.5rem;
+	margin-left: 6.5rem;
+}
+
+
+
