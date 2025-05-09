@@ -1,0 +1,14 @@
+#{extends 'main.html' /}
+#{set title:'Listagem' /}
+
+<ul>
+#{list items:lista, as:'i'}
+   <li>${i.nome} (${i.email}) | 
+	  <a href="@{Pessoas.remover(i.id)}">Remover</li>
+#{/list}
+#{else}
+  <li>Nenhuma pessoa cadastrada. </li>
+#{/else}
+</ul>
+
+<a class="btn btn-secondary" href="@{Pessoas.form}">Cadastrar novo</a>

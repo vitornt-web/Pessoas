@@ -22,11 +22,24 @@ form{
 .input{
 	margin-top:1.5rem;
 	margin-left:2rem;
+	border-radius: 2px;
 }
 
 .submit{
 	margin-top:1.5rem;
+	margin-left: 7rem;
+}
+
+.btn-group{
+	margin-top: 1.5rem;
 	margin-left: 6.5rem;
+}
+
+.custom-label{
+	background-color: #D3D3D3;
+	color: red;
+	border: 1px solid #000;   
+	padding: 3px;
 }
 
 
