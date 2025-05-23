@@ -30,3 +30,37 @@ Condicionais:
 #{else condição}
 ...
 #{/else}
+
+Models AULA - adicionar condições no model, garante uma visão mais geral da condição para o programa
+
+db=mem (em memoria)
+db=fs (em arquivo, gera arquivo salvando os dados)
+
+usando banco mysql
+db.url=jdbc:mysql://localhost/teste
+db.driver=com.mysql.jdbc.Driver
+db.user=root
+db.pass=
+
+MAPEAMENTO OBJETO RELACIONAL
+ORM faz um a relaçao de onde vai os dados no banco, sem precisar criar uma tabela e dizer onde vai cada dado.
+
+@Entity - findall() olha todos os dados persistidos nos atributos do modelo
+
+O find so funciona pelo extends Model
+Product.find("price > ?1" , 50).fetch(); - ?1 : parametro de preço 50 .fetch(): pegar uma coleção de produtos
+
+modelos genéricos: public class Post extends GenericModel{
+@Id 
+public Integer id;
+}
+
+find.All();
+all.fetch(); - serve para limitar : all.fetch(100);
+
+a partir de até: .all().from(50).fetch(100);
+
+post.find("byTittleLike", "%hello%").fetch(); like - parte de algo ou se parece
+Post.find("byAuthorisNull").fetch; 
+
+Editar e busca personalizada: controle de transação
