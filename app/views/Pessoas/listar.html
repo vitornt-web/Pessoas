@@ -1,9 +1,10 @@
 #{extends 'main.html' /}
 #{set title:'Listagem' /}
 
+Quantidade de pessoas cadastradas: ${quant}
 <ul>
 #{list items:lista, as:'i'}
-   <li>${i.nome} (${i.email}) | 
+<li>  <a href="@{Pessoas.editar(i.id)}">Editar</a> | ${i.nome} (${i.email}) | 
 	  <a href="@{Pessoas.remover(i.id)}">Remover</li>
 #{/list}
 #{else}

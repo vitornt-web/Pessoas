@@ -11,15 +11,7 @@ public class Pessoas extends Controller {
 		render(); 
 	}
 	
-	public static void listar() {
-		List<Pessoa> lista = Pessoa.findAll();
-		render(lista);
-	}
-  
-	public static void detalhar(Pessoa pes){
-		render(pes);
-	}
-	
+
 	public static void salvar(Pessoa pes) {
 		if(pes.nome != null) {
 			pes.nome = pes.nome.toUpperCase();
@@ -29,9 +21,14 @@ public class Pessoas extends Controller {
 		}
 		
 		pes.save();
-		detalhar(pes);
+		listar();
 	}
 	
+	public static void listar() {
+		List<Pessoa> lista = Pessoa.findAll();
+		int quant = lista.size();
+		render(lista, quant);
+	}
 	
 	public static void remover(Long id) {
 		Pessoa pes = Pessoa.findById(id);
@@ -39,4 +36,10 @@ public class Pessoas extends Controller {
 		listar();
 		
 	}
+	
+	public static void editar(Long id) {
+		Pessoa pes = Pessoa.findById(id);
+		render("@{Pessoas.form}", pes);
+	}
 }
+

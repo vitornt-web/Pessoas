@@ -9,5 +9,5 @@ public class Pessoa extends Model{
   
 	public String nome;
 	public String email;
-	public int data;
+	public Integer quant;
 }

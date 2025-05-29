@@ -18,11 +18,11 @@
 				<form action="@{Pessoas.salvar}">
 					<div class="input">
 					<label>Nome:</label>
-				  <input type="text" name="pes.nome" > <br />
+				  <input type="text" name="pes.nome" value="${pes?.nome}"> <br />
 				   </div>
 				   <div class="input">
 				    <label>Email:</label>
-				  <input type="email" name="pes.email">
+				  <input type="email" name="pes.email" value="${pes?.email}">
 				  </div>      
 				  <input class="submit" type="submit" value="Cadastrar"/>
 				</form>
