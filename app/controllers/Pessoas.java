@@ -2,12 +2,15 @@ package controllers;
 
 import java.util.List;
 
+import models.Departamento;
 import models.Pessoa;
 import play.mvc.Controller;
 
 public class Pessoas extends Controller {
 	
 	public static void form() {
+		List<Departamento> departamentos = Departamento.findAll();
+		render(departamentos);
 		render(); 
 	}
 	
@@ -39,6 +42,8 @@ public class Pessoas extends Controller {
 	
 	public static void editar(Long id) {
 		Pessoa pes = Pessoa.findById(id);
+		List <Departamento> departamentos = Departamento.findAll();
+		
 		render("@{Pessoas.form}", pes);
 	}
 }
